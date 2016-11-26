@@ -1,2 +1,2 @@
-# toy_app
+# README
 Toy app
