@@ -1,0 +1,51 @@
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20161126044439)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126044439"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for fe80::1%lo0 at 2016-11-26 00:11:35 -0500
+
+
+Started GET "/users" for fe80::1%lo0 at 2016-11-26 00:11:51 -0500
+
+
+Started GET "/users" for fe80::1%lo0 at 2016-11-26 00:33:51 -0500
+
+
+Started GET "/user" for fe80::1%lo0 at 2016-11-26 00:33:53 -0500
+
+
+Started GET "/index" for fe80::1%lo0 at 2016-11-26 00:34:21 -0500
+
+
+Started GET "/toy_app/index" for fe80::1%lo0 at 2016-11-26 00:34:30 -0500
+
+
+Started GET "/toy_app/users" for fe80::1%lo0 at 2016-11-26 00:34:34 -0500
+
+
+Started GET "/users" for ::1 at 2016-11-26 00:41:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 1833ms (Views: 1807.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 00:41:25 -0500
+
+
+Started GET "/assets/scaffolds.self-4ade0c57278540e64f93953f9cdc513e7a762f264b1acb3236247260c0be0301.css?body=1" for ::1 at 2016-11-26 00:41:25 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 00:41:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-11-26 00:41:25 -0500
